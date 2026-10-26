@@ -1,9 +1,17 @@
-﻿name: GitHub Demo Build
+
+name: GitHub Demo Build
+
+run-name: GitHub Demo Build ($&#123;&#123; inputs.portal_dispatch_id &#125;&#125;)
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      portal_dispatch_id:
+        description: Portal dispatch correlation
+        required: true
+        type: string
 
 permissions:
   contents: read
